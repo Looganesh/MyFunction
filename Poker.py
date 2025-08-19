@@ -11,5 +11,7 @@ def Poker ():
     random.shuffle(deck)
     shuffled_deck = deck.copy()
     print(shuffled_deck)
+    draw = random.choices(shuffled_deck, k=2)
+    print("draw :" ,draw )
     
 Poker()
