@@ -16,7 +16,15 @@ def myfunction (weight, height):
     else:
         return "You're Underweight"
 
-weight = int(input("Enter your weight(KG) : "))
-height = int(input("Enter your height(CM) : "))
-
+while True :
+    try:
+        weight = int(input("Enter your weight(KG) : "))
+        height = int(input("Enter your height(CM) : "))
+        if weight <= 0 or height <= 0 :
+            print('Enter a Valid number')
+        else:
+            break 
+    except ValueError :
+        print("Enter a Number not a Text or Negative Number")
+    
 print(myfunction(weight, height))
